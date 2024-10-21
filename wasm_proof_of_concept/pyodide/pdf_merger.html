@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+  </head>
+    <body>
+        <div>
+            <div>
+                <h1 class="title">PDF Merger</h1>
+            </div>
+        </div> 
+        <form id="upload-form" enctype="multipart/form-data">
+            <h3 style="color: red;" id="error-message" hidden></h3>
+            <label for="file">Choose Files: </label>
+            <input type="file" multiple id="file-field" name="file" required>
+            <button type="submit">Merge</button>
+        </form>
+        <ul id="not-converted"></ul>
+        <div id="download-div"></div>
+        <script src="pdf_merger.js"></script>
+    </body>
+</html>

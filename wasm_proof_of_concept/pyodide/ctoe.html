@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+  </head>
+    <body>
+        <div>
+            <div>
+                <h1 class="title">CSV to Excel</h1>
+            </div>
+        </div> 
+        <form id="upload-form" enctype="multipart/form-data">
+            <h3 style="color: red;" id="error-message" hidden></h3>
+            <label for="file">Choose Files: </label>
+            <input multiple type="file" id="file-field" name="file" required>
+            <label for="all_in_one">All CSV sheets in single Excel file: </label>
+            <input type="checkbox" id="all_in_one" name="all_in_one" value="all_in_one">
+            <button type="submit">Convert</button>
+        </form>
+        <ul id="not-converted"></ul>
+        <div id="download-div"></div>
+        <script>
+            var destination_type="PDF"
+        </script>
+        <script src="ctoe.js"></script>
+    </body>
+</html>

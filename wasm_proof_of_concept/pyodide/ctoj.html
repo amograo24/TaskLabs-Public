@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+  </head>
+    <body>
+        <div>
+            <div>
+                <h1 class="title">CSV to JSON</h1>
+            </div>
+        </div> 
+        <form id="upload-form" enctype="multipart/form-data">
+            <h3 style="color: red;" id="error-message" hidden></h3>
+            <label for="file">Choose Files: </label>
+            <input multiple type="file" id="file-field" name="file" required>
+            <label for="orientation">Orientation Type: </label>
+            <select id="orientation" name="orientation">
+                <!-- options: ‘split’, ‘records’, ‘index’, ‘columns’, ‘values’, ‘table’ -->
+                <option value="records" selected>Records</option>
+                <option value="columns">Columns</option>
+                <option value="index">Index</option>
+                <option value="split">Split</option>
+                <option value="table">Table</option>
+                <option value="values">Values</option>
+            </select>
+            <button type="submit">Convert</button>
+        </form>
+        <ul id="not-converted"></ul>
+        <div id="download-div"></div>
+        <script>
+            var destination_type="PDF"
+        </script>
+        <script src="ctoj.js"></script>
+    </body>
+</html>

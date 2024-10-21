@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+  </head>
+    <body>
+        <div>
+            <div>
+                <h1 class="title">PDF Splitter</h1>
+            </div>
+        </div> 
+        <form id="upload-form" enctype="multipart/form-data">
+            <h3 style="color: red;" id="error-message" hidden></h3>
+            <label for="file">Choose Files: </label>
+            <input type="file" id="file-field" name="file" required>
+            <!-- label and input field for number input, and min value should be zero -->
+            <label for="number">Page Number to Split: </label>
+            <input type="number" id="page-number" name="number" min="0" required>
+            <button type="submit">Split</button>
+        </form>
+        <ul id="not-converted"></ul>
+        <div id="download-div"></div>
+        <script src="pdf_splitter.js"></script>
+    </body>
+</html>

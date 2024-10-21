@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+  </head>
+    <body>
+        <div>
+            <div>
+                <h1 class="title">Generate QR Code</h1>
+            </div>
+        </div> 
+        <form id="upload-form" enctype="multipart/form-data">
+            <h3 style="color: red;" id="error-message" hidden></h3>
+            <label for="qr_text">QR Text: </label>
+            <input type="text" id="qr_text" name="qr_text" required>
+            <label for="file">Choose Icon: </label>
+            <input type="file" id="file-field" name="file">
+            <label for="qr_colour">QR Colour: </label>
+            <input type="color" id="qr_colour" name="qr_colour" value="#000000">
+            <label for="qr_background">QR Background: </label>
+            <input type="color" id="qr_background" name="qr_background" value="#FFFFFF">
+            <button type="submit">Convert</button>
+        </form>
+        <ul id="not-converted"></ul>
+        <div id="download-div"></div>
+        <script>
+            var destination_type="PDF"
+        </script>
+        <script src="qrcode.js"></script>
+    </body>
+</html>
