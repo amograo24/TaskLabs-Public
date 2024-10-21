@@ -1,3 +1,4 @@
+Note: As per my NDA, **I cannot have a public repo** for the work I did in TaskLabs. However, here are **some glimpses** - (1) Proof of Concept for Wasm with Python, (2) Documentation I made for other in-house developers.
 
 ## Table of Contents
 
